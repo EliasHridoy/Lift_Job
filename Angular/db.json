@@ -1,0 +1,12 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "location": "locaaation",
+      "salaryMin": 50,
+      "salaryMax": 500,
+      "tags": ""
+    }
+  ]
+}
