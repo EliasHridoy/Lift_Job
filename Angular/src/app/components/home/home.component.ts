@@ -6,8 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  admin:boolean;
+  client:boolean;
+  
+    constructor() { 
+      this.admin = false;
+      this.client = false;
+      if(localStorage.getItem("role") == "admin"){
+        this.admin = true;
+      }
+      else if(localStorage.getItem("role") == "client"){
+        this.client = true;
+      }
+    }
 
   ngOnInit(): void {
   }

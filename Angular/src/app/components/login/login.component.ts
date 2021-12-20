@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   emailaddress:string;
   password:string;
-  constructor() { 
+  constructor(private router : Router) { 
     this.emailaddress = '';
     this.password = '';
   }
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
         else{
           localStorage.setItem("role", "public");
         }
+        this.router.navigate(['/']);
     }
 
 }

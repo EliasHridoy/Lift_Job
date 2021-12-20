@@ -21,33 +21,32 @@
                             <li><a routerLink="/" >Home</a>                               
                             </li>
     
-                            <li><a href="#">Find Work</a>
+                            <li *ngIf="client"><a href="#">Find Work</a>
                                 <ul class="dropdown-nav">
-                                    <li><a href="#">Browse Jobs</a>                                        
-                                    </li>                                   
-                                    <li><a href="browse-companies.html">Browse Companies</a></li>
+                                    <li><a routerLink="/client/job-list">Browse Jobs</a></li>                                   
                                     <li><a href="single-job-page.html">Job Page</a></li>
                                 </ul>
                             </li>
     
-                            <li><a href="#">For Employers</a>
+                            <li *ngIf="admin"><a href="#">For Employers</a>
                                 <ul class="dropdown-nav">
                                     <li><a href="#">Find a Freelancer</a></li>
                                     <li><a href="single-freelancer-profile.html">Freelancer Profile</a></li>
-                                    <li><a routerlink="/clients">Post a Job</a></li>
+                                    <li><a routerLink='/client/job-post'>Post a Job</a></li>
                                 </ul>
                             </li>
     
-                            <li><a href="#">Dashboard</a>
+                            <li *ngIf="admin||client"><a href="#">Dashboard</a>
                                 <ul class="dropdown-nav">
-                                    <li><a href="dashboard.html">Dashboard</a></li>
+                                    <li *ngIf="admin"><a  routerLink='/client/dashboard'>Dashboard</a></li>
+                                    <li *ngIf="client" ><a routerLink='/client/dashboard'>Dashboard</a></li>
                                     <li><a href="dashboard-messages.html">Messages</a></li>
                                     <li><a href="dashboard-reviews.html">Reviews</a></li>
-                                    <li><a href="dashboard-manage-jobs.html">Jobs</a>
+                                    <li *ngIf="admin"><a href="dashboard-manage-jobs.html">Jobs</a>
                                         <ul class="dropdown-nav">
                                             <li><a href="dashboard-manage-jobs.html">Manage Jobs</a></li>
                                             <li><a href="dashboard-manage-candidates.html">Manage Candidates</a></li>
-                                            <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
+                                            <li><a routerLink='/client/job-post'>Post a Job</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="dashboard-settings.html">Settings</a></li>
@@ -211,7 +210,7 @@
                             </div>
     
                             <!-- Dropdown -->
-                            <div class="header-notifications-dropdown">
+                            <div *ngIf="admin||client" class="header-notifications-dropdown">
     
                                 <!-- User Status -->
                                 <div class="user-status">
@@ -236,7 +235,7 @@
                             <ul class="user-menu-small-nav">
                                 <li><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
                                 <li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
-                                <li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+                                <li><a (click)='logout()'><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
                             </ul>
     
                             </div>

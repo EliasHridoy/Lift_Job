@@ -6,6 +6,7 @@ import { ClientsComponent } from './clients.component';
 import { JobFormComponent } from './job-form/job-form.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobListComponent } from './job-list/job-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { JobListComponent } from './job-list/job-list.component';
     ClientsComponent,
     JobFormComponent,
     JobDetailsComponent,
-    JobListComponent
+    JobListComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
