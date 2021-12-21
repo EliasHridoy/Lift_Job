@@ -28,14 +28,14 @@
 						<div class="headline">
 							<h3><i class="icon-feather-folder-plus"></i> Job Submission Form</h3>
 						</div>
-
+						
 						<div class="content with-padding padding-bottom-10">
 							<div class="row">
 
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Job Title</h5>
-										<input type="text" class="with-border">
+										<input type="text" name="title" [(ngModel)]="title" id='title' class="with-border" />
 									</div>
 								</div>
 
@@ -44,7 +44,7 @@
 										<h5>Location</h5>
 										<div class="input-with-icon">
 											<div id="autocomplete-container">
-												<input id="autocomplete-input" class="with-border" type="text" placeholder="Type Address">
+												<input id="autocomplete-input"[(ngModel)]="location"  class="with-border" type="text" placeholder="Type Address">
 											</div>
 											<i class="icon-material-outline-location-on"></i>
 										</div>
@@ -57,13 +57,13 @@
 										<div class="row">
 											<div class="col-xl-6">
 												<div class="input-with-icon">
-													<input class="with-border" type="text" placeholder="Min">
+													<input class="with-border" type="text" [(ngModel)]="salaryMin"  placeholder="Min">
 													<i class="currency">USD</i>
 												</div>
 											</div>
 											<div class="col-xl-6">
 												<div class="input-with-icon">
-													<input class="with-border" type="text" placeholder="Max">
+													<input class="with-border" type="text" [(ngModel)]="salaryMax"  placeholder="Max">
 													<i class="currency">USD</i>
 												</div>
 											</div>
@@ -76,7 +76,7 @@
 										<h5>Tags <span>(optional)</span>  <i class="help-icon" data-tippy-placement="right" title="Maximum of 10 tags"></i></h5>
 										<div class="keywords-container">
 											<div class="keyword-input-container">
-												<input type="text" class="keyword-input with-border" placeholder="e.g. job title, responsibilites"/>
+												<input type="text" [(ngModel)]="tags" class="keyword-input with-border" placeholder="e.g. job title, responsibilites"/>
 												<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
 											</div>
 											<div class="keywords-list"><!-- keywords go here --></div>
@@ -100,12 +100,14 @@
 
 							</div>
 						</div>
+
 					</div>
 				</div>
 
 				<div class="col-xl-12">
-					<a href="#" class="button ripple-effect big margin-top-30"><i class="icon-feather-plus"></i> Post a Job</a>
+					<input (click)='onPostJob()' class="button ripple-effect big margin-top-30" value=" Post a Job"/>
 				</div>
+
 
 			</div>
 			<!-- Row / End -->

@@ -7,6 +7,20 @@
       "salaryMin": 50,
       "salaryMax": 500,
       "tags": ""
+    },
+    {
+      "title": "asdf",
+      "location": "asdfasdf",
+      "salaryMin": "1",
+      "salaryMax": "2",
+      "tags": "asdfasd",
+      "id": 2
+    }
+  ],
+  "bids": [
+    {
+      "jobId":1,
+    "engineerId": 1
     }
   ]
 }

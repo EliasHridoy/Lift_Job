@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   admin:boolean;
   client:boolean;
-  
-    constructor() { 
+
+    constructor() {
       this.admin = false;
       this.client = false;
       if(localStorage.getItem("role") == "admin"){
@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
       else if(localStorage.getItem("role") == "client"){
         this.client = true;
       }
+      
     }
 
   ngOnInit(): void {

@@ -24,7 +24,7 @@ export class JobService {
     const url = `${this.apiUrl}/${task.id}`;
     return this._http.delete<JobModel>(url);
   }
-  ToggleTaskReminder(task:JobModel):Observable<JobModel>{
+  UpdateTask(task:JobModel):Observable<JobModel>{
     const url = `${this.apiUrl}/${task.id}`;
     return this._http.put<JobModel>(url,task, httpOptions)
   }
