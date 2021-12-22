@@ -44,10 +44,12 @@ export class JobFormComponent implements OnInit {
       location : this.location,
       salaryMin : this.salaryMin,
       salaryMax : this.salaryMax,
-      tags : this.tags
+      tags : this.tags,
+      date : new Date().toString() 
     }
     this._job.AddTask(newJob).subscribe((job)=>(this.jobs.push(job)));
     alert("Add Success");
+    this.clearForm();
   }
 
   UpdateJob(){

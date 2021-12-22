@@ -4,5 +4,6 @@ export interface JobModel {
     location: string,
     salaryMin: number,
     salaryMax: number,
-    tags: string
+    tags: string,
+    date:string
 }

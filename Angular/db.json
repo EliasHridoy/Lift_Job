@@ -6,7 +6,8 @@
       "location": "locaaation",
       "salaryMin": 50,
       "salaryMax": 500,
-      "tags": ""
+      "tags": "",
+      "date": "2021/12/21"
     },
     {
       "title": "asdf",
@@ -14,13 +15,23 @@
       "salaryMin": "1",
       "salaryMax": "2",
       "tags": "asdfasd",
-      "id": 2
+      "id": 2,
+      "date": "2021/12/21"
+    },
+    {
+      "title": "test",
+      "location": "daad",
+      "salaryMin": "33",
+      "salaryMax": "03333",
+      "tags": "",
+      "date": "Wed Dec 22 2021 09:06:17 GMT+0600 (Bangladesh Standard Time)",
+      "id": 3
     }
   ],
   "bids": [
     {
-      "jobId":1,
-    "engineerId": 1
+      "jobId": 1,
+      "engineerId": 1
     }
   ]
 }

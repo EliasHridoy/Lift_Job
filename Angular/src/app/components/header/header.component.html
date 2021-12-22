@@ -23,8 +23,7 @@
     
                             <li *ngIf="client"><a href="#">Find Work</a>
                                 <ul class="dropdown-nav">
-                                    <li><a routerLink="/client/job-list">Browse Jobs</a></li>                                   
-                                    <li><a href="single-job-page.html">Job Page</a></li>
+                                    <li><a routerLink="/job-list">Browse Jobs</a></li>                                   
                                 </ul>
                             </li>
     
@@ -42,10 +41,10 @@
                                     <li *ngIf="client" ><a routerLink='/client/dashboard'>Dashboard</a></li>
                                     <li><a href="dashboard-messages.html">Messages</a></li>
                                     <li><a href="dashboard-reviews.html">Reviews</a></li>
-                                    <li *ngIf="admin"><a href="dashboard-manage-jobs.html">Jobs</a>
+                                    <li *ngIf="admin"><a href="#">Jobs</a>
                                         <ul class="dropdown-nav">
-                                            <li><a href="dashboard-manage-jobs.html">Manage Jobs</a></li>
-                                            <li><a href="dashboard-manage-candidates.html">Manage Candidates</a></li>
+                                            <li><a routerLink="/job-list">Manage Jobs</a></li>
+                                            <li><a href="#">Manage Candidates</a></li>
                                             <li><a routerLink='/client/job-post'>Post a Job</a></li>
                                         </ul>
                                     </li>
